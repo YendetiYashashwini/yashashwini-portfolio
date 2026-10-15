@@ -34,9 +34,7 @@ export default function Hero() {
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-10">
           <a
-            href="https://github.com/YendetiYashashwini"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#projects"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600 hover:from-blue-600 hover:via-indigo-700 hover:to-purple-700 text-white font-semibold shadow-lg shadow-indigo-500/25 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
           >
             <span>Explore Projects</span>
