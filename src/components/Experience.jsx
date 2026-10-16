@@ -1,12 +1,20 @@
 export default function Experience() {
   const milestones = [
     {
+      title: 'Adobe University Hackathon',
+      event: 'Adobe',
+      tag: 'National Hackathon',
+      tagColor: 'text-rose-300 bg-rose-500/10 border-rose-500/30',
+      description:
+        'Cleared Round 1 (Coding Round), competing among university-level applicants nationwide.',
+    },
+    {
       title: 'SkillProof AI',
       event: 'Google for Developers / Hack2Skill Hackathon',
       tag: 'Hackathon Project',
       tagColor: 'text-cyan-300 bg-cyan-500/10 border-cyan-500/30',
       description:
-        'Engineered an interactive skills verification platform evaluating real code authentications and work artifacts using Gemini API.',
+        'Engineered an interactive skills verification platform evaluating real code authentications using Gemini API.',
     },
     {
       title: 'SIH GovGrievance AI',
@@ -14,7 +22,7 @@ export default function Experience() {
       tag: 'National Hackathon',
       tagColor: 'text-amber-300 bg-amber-500/10 border-amber-500/30',
       description:
-        'Developed an automated public grievance classification, priority scoring, and intelligent department triage system using NLP.',
+        'Automated public grievance classification, priority scoring, and department triage system using NLP.',
     },
     {
       title: 'INDIA RUNS Candidate Ranking System',
@@ -22,15 +30,7 @@ export default function Experience() {
       tag: 'Hackathon Project',
       tagColor: 'text-purple-300 bg-purple-500/10 border-purple-500/30',
       description:
-        'Created an automated resume parsing and intelligent candidate scoring pipeline powered by Hugging Face models.',
-    },
-    {
-      title: 'Adobe University Hackathon',
-      event: 'Adobe',
-      tag: 'National Hackathon',
-      tagColor: 'text-rose-300 bg-rose-500/10 border-rose-500/30',
-      description:
-        'Cleared Round 1 (Coding Round), competing among university-level applicants nationwide.',
+        'Automated resume parsing and candidate scoring pipeline powered by Hugging Face models.',
     },
   ]
 
@@ -45,7 +45,7 @@ export default function Experience() {
           <span>Proof of Work &amp; Achievements</span>
         </div>
         <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4 leading-tight">
-          Hackathons &amp;{' '}
+          Experience &amp;{' '}
           <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
             Milestones
           </span>
@@ -63,7 +63,7 @@ export default function Experience() {
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
             </svg>
-            <span>Hackathons &amp; Milestones</span>
+            <span>Experience &amp; Milestones</span>
           </div>
           <span className="text-xs text-purple-400 font-medium">Verified Milestones</span>
         </div>
