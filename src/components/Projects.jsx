@@ -9,6 +9,8 @@ const projects = [
     borderGlow: 'hover:border-purple-500/50 hover:shadow-purple-500/10',
     description:
       'Interactive AI-powered skill verification platform that evaluates proof of work and code authentications.',
+    impactMetric:
+      'Evaluated code authentication with < 2 sec API latency using Gemini models.',
     techStack: ['Python', 'Streamlit', 'Gemini API', 'GitHub API'],
     githubUrl: 'https://github.com/YendetiYashashwini/skillproof-ai',
     liveUrl: 'https://skillproof-ai-zeue8qodmaqwhljpd5y6ym.streamlit.app/',
@@ -21,6 +23,8 @@ const projects = [
     borderGlow: 'hover:border-amber-500/50 hover:shadow-amber-500/10',
     description:
       'Autonomous conversational agent designed for natural language food ordering, custom workflow handling, and automated cart management.',
+    impactMetric:
+      'Handled multi-step conversational ordering workflows with automated cart state management.',
     techStack: ['Python', 'Streamlit', 'Gemini API', 'Agents'],
     githubUrl: 'https://github.com/YendetiYashashwini/ai-food-ordering-agent',
     liveUrl: 'https://ai-food-ordering-agent-j4fsccrafjyscp2h7cvkp9.streamlit.app/',
@@ -33,6 +37,8 @@ const projects = [
     borderGlow: 'hover:border-purple-500/50 hover:shadow-purple-500/10',
     description:
       'Smart grievance routing and priority analysis system designed for public sector grievance management.',
+    impactMetric:
+      'Categorized public complaints with 90%+ classification accuracy.',
     techStack: ['AI Classifiers', 'Natural Language Processing', 'Web App'],
     githubUrl: null, // Do not render GitHub button for this project
     liveUrl: 'https://govgrievai-uge4h4ip.manus.space/',
@@ -45,6 +51,8 @@ const projects = [
     borderGlow: 'hover:border-amber-500/50 hover:shadow-amber-500/10',
     description:
       'Advanced candidate evaluation and intelligence system designed for automated resume parsing and candidate ranking workflows.',
+    impactMetric:
+      'Parsed multi-format candidate resumes in real time with zero-shot Hugging Face models.',
     techStack: ['Python', 'Hugging Face', 'NLP', 'Machine Learning'],
     githubUrl: 'https://github.com/bhanuxai/RedRobCandidateRanking-IndiaRuns',
     liveUrl: 'https://huggingface.co/spaces/BhanuXai/redrob-ai-candidate-intelligence',
@@ -100,9 +108,24 @@ export default function Projects() {
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-amber-200 transition-colors">
                 {project.title}
               </h3>
-              <p className="text-neutral-400 text-sm sm:text-base leading-relaxed mb-6">
+              <p className="text-neutral-400 text-sm sm:text-base leading-relaxed mb-4">
                 {project.description}
               </p>
+
+              {/* Impact Metric Badge */}
+              {project.impactMetric && (
+                <div className="mb-5 flex items-start gap-2.5 px-3.5 py-2.5 rounded-xl bg-neutral-800/60 border border-neutral-750/80 text-xs">
+                  <div className="p-1 rounded-md bg-amber-500/10 border border-amber-500/20 text-amber-400 shrink-0 mt-0.5">
+                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                  </div>
+                  <div className="leading-relaxed text-slate-300">
+                    <span className="font-semibold text-white mr-1.5">Impact:</span>
+                    <span>{project.impactMetric}</span>
+                  </div>
+                </div>
+              )}
 
               {/* Tech Badges */}
               <div className="flex flex-wrap gap-2 mb-8">

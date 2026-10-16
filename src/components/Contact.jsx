@@ -19,11 +19,21 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate sending delay for high-quality interactive UI feedback
+    const recipient = 'yashashwini1207@gmail.com'
+    const subject = encodeURIComponent(
+      formData.subject?.trim() || `Portfolio Contact from ${formData.name}`
+    )
+    const bodyContent = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    const body = encodeURIComponent(bodyContent)
+    const mailtoUrl = `mailto:${recipient}?subject=${subject}&body=${body}`
+
+    // Trigger mail client with form inputs
+    window.location.href = mailtoUrl
+
     setTimeout(() => {
       setIsSubmitting(false)
       setIsSubmitted(true)
-    }, 700)
+    }, 600)
   }
 
   const handleReset = () => {
@@ -59,6 +69,8 @@ export default function Contact() {
           {/* Direct Email Card */}
           <a
             href="mailto:yashashwini1207@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group p-6 rounded-2xl bg-neutral-900/70 backdrop-blur-xl border border-neutral-800/90 hover:border-emerald-500/50 transition-all duration-200 shadow-md hover:-translate-y-0.5 flex items-start gap-4"
           >
             <div className="p-3 rounded-xl bg-slate-800 border border-slate-700 text-emerald-400 group-hover:border-emerald-500/50 transition-colors">
@@ -190,8 +202,12 @@ export default function Contact() {
                 </button>
                 <a
                   href={`mailto:yashashwini1207@gmail.com?subject=${encodeURIComponent(
-                    formData.subject || 'Portfolio Inquiry'
-                  )}&body=${encodeURIComponent(formData.message || '')}`}
+                    formData.subject || `Portfolio Contact from ${formData.name}`
+                  )}&body=${encodeURIComponent(
+                    `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold transition-colors"
                 >
                   Open in Mail Client

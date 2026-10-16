@@ -24,10 +24,10 @@ export default function Hero() {
         </h1>
 
         {/* 3. Vibrant Headline / Tagline directly below the name */}
-        <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-100 mb-4 sm:mb-5 text-center leading-snug">
-          I Learn by Building:{' '}
+        <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-100 mb-4 sm:mb-5 text-center leading-snug max-w-3xl">
+          Building{' '}
           <span className="bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-300 bg-clip-text text-transparent">
-            From Code to Deployed AI.
+            Autonomous AI Agents, Scalable ML Pipelines &amp; Production Web Apps.
           </span>
         </h2>
 
@@ -47,7 +47,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="/resume.pdf"
+            href="/yashashwini_resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             download="Yashashwini_Yendeti_Resume.pdf"
