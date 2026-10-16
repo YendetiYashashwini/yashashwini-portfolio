@@ -51,7 +51,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-24 sm:py-32 px-6 max-w-7xl mx-auto scroll-mt-12">
+    <section id="projects" className="relative py-24 sm:py-32 px-6 max-w-7xl mx-auto scroll-mt-20">
       {/* Background ambient decorative glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[38rem] h-[38rem] bg-gradient-to-tr from-purple-600/10 via-amber-500/5 to-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
 

@@ -2,7 +2,7 @@ export default function Hero() {
   const techStack = ['Python', 'LLMs', 'FastAPI', 'React', 'Docker', 'MongoDB']
 
   return (
-    <section className="relative overflow-hidden bg-slate-950 text-slate-100 min-h-screen flex items-center justify-center px-6 py-20 lg:py-28">
+    <section id="home" className="relative overflow-hidden bg-slate-950 text-slate-100 min-h-screen flex items-center justify-center px-6 py-20 lg:py-28 scroll-mt-20">
       {/* Background ambient decorative glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/15 rounded-full blur-3xl pointer-events-none" />
@@ -31,21 +31,32 @@ export default function Hero() {
           Hi, I&apos;m Yashashwini. B.Tech CSE (AI &amp; ML) student at VVIT. Focused on building practical full-stack AI applications and agentic workflows with live deployments.
         </p>
 
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-10">
+        {/* Action Buttons: View Projects, Download Resume, Get in Touch */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-10">
           <a
             href="#projects"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600 hover:from-blue-600 hover:via-indigo-700 hover:to-purple-700 text-white font-semibold shadow-lg shadow-indigo-500/25 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
           >
-            <span>Explore Projects</span>
+            <span>View Projects</span>
             <span aria-hidden="true">&rarr;</span>
           </a>
 
           <a
-            href="mailto:yashashwini1207@gmail.com"
+            href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-700 hover:border-slate-500 font-semibold transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+            download="Yashashwini_Yendeti_Resume.pdf"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-700 hover:border-slate-500 font-semibold transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-sm"
+          >
+            <svg className="w-4 h-4 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            <span>Download Resume</span>
+          </a>
+
+          <a
+            href="#contact"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900/60 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-600 font-semibold transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
           >
             <span>Get in Touch</span>
           </a>
