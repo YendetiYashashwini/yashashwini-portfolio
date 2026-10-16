@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-blue-500/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
-        {/* Top Badge: Pulsing green dot + text */}
+        {/* 1. Top Badge: Pulsing green dot + text */}
         <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-xs sm:text-sm font-medium text-slate-300 mb-8 shadow-sm backdrop-blur-md">
           <span className="relative flex h-2.5 w-2.5">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
@@ -18,21 +18,28 @@ export default function Hero() {
           <span>Available for AI/ML engineering roles</span>
         </div>
 
-        {/* Main Headline */}
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
-          I Learn by Building:{' '}
-          <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(129,140,248,0.35)]">
-            From Code to Deployed AI.
+        {/* 2. Centered Large Name in bold gradient text */}
+        <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-white mb-5 leading-tight text-center">
+          <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(129,140,248,0.4)]">
+            Yashashwini
           </span>
         </h1>
 
-        {/* Subtext */}
-        <p className="text-base sm:text-lg lg:text-xl text-slate-300 max-w-2xl mb-10 leading-relaxed font-normal">
+        {/* 3. Vibrant Headline / Tagline directly below the name */}
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-100 mb-6 text-center leading-snug">
+          I Learn by Building:{' '}
+          <span className="bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-300 bg-clip-text text-transparent">
+            From Code to Deployed AI.
+          </span>
+        </h2>
+
+        {/* 4. Description Subtext */}
+        <p className="text-base sm:text-lg lg:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-normal text-center">
           Hi, I&apos;m Yashashwini. B.Tech CSE (AI &amp; ML) student at VVIT. Focused on building practical full-stack AI applications and agentic workflows with live deployments.
         </p>
 
-        {/* Action Buttons: View Projects, Download Resume, Get in Touch */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-10">
+        {/* 5. Action Buttons (View Projects, Download Resume, Get in Touch) */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-12">
           <a
             href="#projects"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600 hover:from-blue-600 hover:via-indigo-700 hover:to-purple-700 text-white font-semibold shadow-lg shadow-indigo-500/25 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
@@ -62,7 +69,7 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Social Icons (Horizontal row of clean icons, no descriptive text) */}
+        {/* 6. Social Icons & Tech Stack Bar */}
         <div className="flex items-center justify-center gap-4 mb-14">
           {/* GitHub Icon Card */}
           <a
@@ -127,7 +134,7 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Bottom Tech Stack Bar */}
+        {/* Tech Stack Bar */}
         <div className="pt-8 border-t border-slate-800/80 w-full flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 text-xs sm:text-sm text-slate-400">
           <span className="text-slate-500 font-medium mr-1">Tech Stack:</span>
           {techStack.map((tech) => (
