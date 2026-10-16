@@ -1,9 +1,47 @@
 export default function About() {
-  const traits = [
-    { emoji: '🚀', label: 'Hackathon Enthusiast' },
-    { emoji: '🧠', label: 'AI & ML Builder' },
-    { emoji: '💡', label: 'Problem Solver' },
-    { emoji: '💻', label: 'Full-Stack Developer' },
+  const stats = [
+    {
+      title: 'B.Tech CSE (AI & ML)',
+      subtitle: 'Specialization & Degree',
+      icon: (
+        <svg className="w-5 h-5 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 14v7" />
+        </svg>
+      ),
+      accent: 'border-indigo-500/30 bg-indigo-500/10 text-indigo-300',
+    },
+    {
+      title: 'Vasireddy Venkatadri Institute of Technology (VVIT)',
+      subtitle: 'Institution & Alma Mater',
+      icon: (
+        <svg className="w-5 h-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+      ),
+      accent: 'border-cyan-500/30 bg-cyan-500/10 text-cyan-300',
+    },
+    {
+      title: 'National Hackathons',
+      subtitle: 'Adobe • SIH • Google • INDIA RUNS',
+      icon: (
+        <svg className="w-5 h-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+        </svg>
+      ),
+      accent: 'border-amber-500/30 bg-amber-500/10 text-amber-300',
+    },
+    {
+      title: 'AI & Full-Stack',
+      subtitle: 'Production Agents & Pipelines',
+      icon: (
+        <svg className="w-5 h-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+        </svg>
+      ),
+      accent: 'border-purple-500/30 bg-purple-500/10 text-purple-300',
+    },
   ]
 
   return (
@@ -13,65 +51,176 @@ export default function About() {
       <div className="absolute bottom-10 right-0 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
 
       {/* Section Header */}
-      <div className="relative z-10 text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+      <div className="relative z-10 text-center max-w-3xl mx-auto mb-14 sm:mb-16">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-neutral-900/80 border border-neutral-800 text-xs font-medium text-slate-300 mb-4 shadow-sm backdrop-blur-sm">
-          <span>Who I Am</span>
+          <span>Who I Am &amp; What I Build</span>
         </div>
         <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4 leading-tight">
-          About{' '}
+          Designing the Future with{' '}
           <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
-            Me
+            AI &amp; ML
           </span>
         </h2>
+        <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          Transforming complex machine learning models and generative algorithms into production-ready, interactive applications and agentic systems.
+        </p>
       </div>
 
-      {/* Glassmorphism Bio Card */}
-      <div className="relative z-10 max-w-4xl mx-auto rounded-2xl bg-neutral-900/60 backdrop-blur-xl border border-neutral-800/90 p-8 sm:p-12 shadow-2xl">
-        {/* Subtle card glow overlay */}
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-500/5 via-transparent to-purple-500/5 pointer-events-none" />
+      {/* Top Stats Cards Row */}
+      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8">
+        {stats.map((stat) => (
+          <div
+            key={stat.title}
+            className="rounded-2xl bg-neutral-900/70 backdrop-blur-xl border border-neutral-800/90 hover:border-indigo-500/40 p-5 sm:p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between"
+          >
+            <div className="flex items-center justify-between mb-4">
+              <div className={`p-2.5 rounded-xl border ${stat.accent}`}>
+                {stat.icon}
+              </div>
+            </div>
+            <div>
+              <h3 className="text-base sm:text-lg font-bold text-white mb-1 leading-snug">
+                {stat.title}
+              </h3>
+              <p className="text-xs text-slate-400 font-medium">
+                {stat.subtitle}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
 
-        <div className="relative z-10">
-          {/* Intro paragraph */}
-          <p className="text-slate-200 text-lg sm:text-xl leading-relaxed mb-6">
-            Hi, I&apos;m{' '}
-            <span className="text-white font-bold bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
-              Yashashwini
-            </span>
-            &mdash;a B.Tech Computer Science and Engineering student specializing in{' '}
-            <span className="text-indigo-300 font-semibold">
-              Artificial Intelligence &amp; Machine Learning
-            </span>{' '}
-            at Vasireddy Venkatadri Institute of Technology (VVIT).
-          </p>
+      {/* Bento Grid Layout */}
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Bento Card 1: AI & ML Student & Engineer (Span 2) */}
+        <div className="lg:col-span-2 rounded-2xl bg-neutral-900/70 backdrop-blur-xl border border-neutral-800/90 hover:border-indigo-500/40 p-7 sm:p-9 transition-all duration-300 hover:shadow-2xl flex flex-col justify-between group">
+          <div>
+            <div className="flex items-center justify-between gap-3 mb-5">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold text-indigo-300 bg-indigo-500/10 border border-indigo-500/30">
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <span>Specialization &amp; Focus</span>
+              </div>
+              <span className="text-xs text-slate-500 font-mono">Bento #01</span>
+            </div>
 
-          {/* Passion paragraph */}
-          <p className="text-slate-400 text-base sm:text-lg leading-relaxed mb-6">
-            I&apos;m passionate about building practical, production-ready full-stack applications
-            that go beyond classroom theory. From architecting autonomous agentic workflows powered
-            by LLM APIs to deploying live web applications with modern frameworks, I believe the
-            best way to learn is to{' '}
-            <span className="text-slate-200 font-medium italic">ship real things</span>.
-          </p>
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-4 group-hover:text-indigo-200 transition-colors">
+              AI &amp; ML Student &amp; Engineer
+            </h3>
 
-          {/* Problem solving paragraph */}
-          <p className="text-slate-400 text-base sm:text-lg leading-relaxed mb-10">
-            Whether it&apos;s competing in national hackathons like SIH and Adobe, engineering
-            intelligent grievance routing systems, or crafting AI-powered skill verification
-            platforms, I thrive on solving complex problems through clean code, sound architecture,
-            and relentless iteration.
-          </p>
+            <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+              Currently pursuing a B.Tech in Computer Science and Engineering specializing in <span className="text-white font-medium">Artificial Intelligence &amp; Machine Learning</span> at Vasireddy Venkatadri Institute of Technology (VVIT).
+            </p>
 
-          {/* Trait Pills */}
-          <div className="flex flex-wrap items-center gap-3">
-            {traits.map((trait) => (
+            <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-6">
+              My core engineering focus centers on architecting practical LLM workflows, autonomous agentic systems, and building production-ready machine learning models. I emphasize taking models out of Jupyter notebooks and turning them into scalable, evaluated, and deployable software solutions.
+            </p>
+          </div>
+
+          <div className="pt-5 border-t border-neutral-800/80 flex flex-wrap gap-2">
+            {[
+              'LLM Workflows',
+              'Agentic Architectures',
+              'Production Models',
+              'Prompt Optimization',
+              'Python & NLP',
+            ].map((tag) => (
               <span
-                key={trait.label}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neutral-800/80 border border-neutral-700/80 hover:border-indigo-500/50 text-sm font-medium text-slate-200 hover:text-white transition-all duration-200 shadow-sm hover:shadow-indigo-500/10 hover:-translate-y-0.5 cursor-default"
+                key={tag}
+                className="px-3 py-1 rounded-lg bg-neutral-800/90 text-slate-300 border border-neutral-750 text-xs font-medium"
               >
-                <span className="text-base">{trait.emoji}</span>
-                <span>{trait.label}</span>
+                {tag}
               </span>
             ))}
+          </div>
+        </div>
+
+        {/* Bento Card 2: Hackathon Builder (Span 1) */}
+        <div className="lg:col-span-1 rounded-2xl bg-neutral-900/70 backdrop-blur-xl border border-neutral-800/90 hover:border-amber-500/40 p-7 sm:p-9 transition-all duration-300 hover:shadow-2xl flex flex-col justify-between group">
+          <div>
+            <div className="flex items-center justify-between gap-3 mb-5">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold text-amber-300 bg-amber-500/10 border border-amber-500/30">
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+                <span>Competitive Arena</span>
+              </div>
+              <span className="text-xs text-slate-500 font-mono">Bento #02</span>
+            </div>
+
+            <h3 className="text-xl sm:text-2xl font-extrabold text-white mb-4 group-hover:text-amber-200 transition-colors">
+              Hackathon Builder
+            </h3>
+
+            <p className="text-slate-400 text-sm leading-relaxed mb-5">
+              Active participant in competitive national hackathons, shipping functional AI prototypes under rapid sprint deadlines:
+            </p>
+
+            <ul className="space-y-3 mb-6">
+              {[
+                { event: 'Google for Developers / Hack2Skill', project: 'SkillProof AI Platform' },
+                { event: 'Smart India Hackathon (SIH)', project: 'GovGrievance AI Routing' },
+                { event: 'Adobe University Hackathon', project: 'Cleared Coding Round 1' },
+                { event: 'INDIA RUNS Hackathon', project: 'Candidate Intelligence System' },
+              ].map((item) => (
+                <li key={item.event} className="flex items-start gap-2.5 text-xs text-slate-300">
+                  <span className="text-amber-400 font-bold mt-0.5">&bull;</span>
+                  <div>
+                    <span className="font-semibold text-white">{item.event}</span>
+                    <span className="text-slate-400 block text-[11px]">{item.project}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="pt-4 border-t border-neutral-800/80">
+            <span className="text-xs font-semibold text-amber-300">
+              Tested under high-intensity sprint constraints
+            </span>
+          </div>
+        </div>
+
+        {/* Bento Card 3: Open-Source & AI Developer (Span 3) */}
+        <div className="lg:col-span-3 rounded-2xl bg-neutral-900/70 backdrop-blur-xl border border-neutral-800/90 hover:border-purple-500/40 p-7 sm:p-9 transition-all duration-300 hover:shadow-2xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6 group">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold text-purple-300 bg-purple-500/10 border border-purple-500/30">
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+                <span>Engineering Philosophy</span>
+              </div>
+              <span className="text-xs text-slate-500 font-mono">Bento #03</span>
+            </div>
+
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-3 group-hover:text-purple-200 transition-colors">
+              Open-Source &amp; AI Developer
+            </h3>
+
+            <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-3">
+              Focused on collaborative software engineering, shipping real code artifacts, and deploying agentic web applications. I believe software engineering is fundamentally about tangible outcomes—delivering working code, robust documentation, and public deployments.
+            </p>
+
+            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              Every prototype is constructed with clean Git version control, modular frontend/backend boundaries, and reliable API integrations across Gemini and Hugging Face ecosystems.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap md:flex-col gap-2.5 w-full md:w-auto shrink-0">
+            <div className="px-4 py-2.5 rounded-xl bg-neutral-800/80 border border-neutral-750 text-xs font-medium text-slate-200 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span>100% Deployed Proof of Work</span>
+            </div>
+            <div className="px-4 py-2.5 rounded-xl bg-neutral-800/80 border border-neutral-750 text-xs font-medium text-slate-200 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-indigo-400"></span>
+              <span>Collaborative Git &amp; Clean Architecture</span>
+            </div>
+            <div className="px-4 py-2.5 rounded-xl bg-neutral-800/80 border border-neutral-750 text-xs font-medium text-slate-200 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-purple-400"></span>
+              <span>Agentic Web Applications</span>
+            </div>
           </div>
         </div>
       </div>

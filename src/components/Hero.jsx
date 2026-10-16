@@ -1,6 +1,4 @@
 export default function Hero() {
-  const techStack = ['Python', 'LLMs', 'FastAPI', 'React', 'Docker', 'MongoDB']
-
   return (
     <section id="home" className="relative overflow-hidden bg-slate-950 text-slate-100 min-h-screen flex items-center justify-center px-6 py-20 lg:py-28 scroll-mt-20">
       {/* Background ambient decorative glows */}
@@ -69,8 +67,8 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* 6. Social Icons & Tech Stack Bar */}
-        <div className="flex items-center justify-center gap-4 mb-14">
+        {/* 6. Social Icons */}
+        <div className="flex items-center justify-center gap-4">
           {/* GitHub Icon Card */}
           <a
             href="https://github.com/YendetiYashashwini"
@@ -132,19 +130,6 @@ export default function Hero() {
               />
             </svg>
           </a>
-        </div>
-
-        {/* Tech Stack Bar */}
-        <div className="pt-8 border-t border-slate-800/80 w-full flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 text-xs sm:text-sm text-slate-400">
-          <span className="text-slate-500 font-medium mr-1">Tech Stack:</span>
-          {techStack.map((tech) => (
-            <span
-              key={tech}
-              className="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-200 font-medium hover:border-slate-700 hover:text-white transition-colors"
-            >
-              {tech}
-            </span>
-          ))}
         </div>
       </div>
     </section>

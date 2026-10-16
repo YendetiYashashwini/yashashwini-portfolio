@@ -1,8 +1,10 @@
+import { useState } from 'react'
+
 const projects = [
   {
     id: 'skillproof-ai',
     title: 'SkillProof AI',
-    tag: 'Full Stack AI',
+    tag: 'Hackathon Project',
     tagColor: 'bg-cyan-500/10 text-cyan-300 border-cyan-500/30',
     borderGlow: 'hover:border-purple-500/50 hover:shadow-purple-500/10',
     description:
@@ -50,6 +52,8 @@ const projects = [
 ]
 
 export default function Projects() {
+  const [showMore, setShowMore] = useState(false)
+
   return (
     <section id="projects" className="relative py-24 sm:py-32 px-6 max-w-7xl mx-auto scroll-mt-20">
       {/* Background ambient decorative glow */}
@@ -160,6 +164,51 @@ export default function Projects() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Show More Projects Toggle Button */}
+      <div className="relative z-10 mt-12 text-center">
+        <button
+          type="button"
+          onClick={() => setShowMore((prev) => !prev)}
+          className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-neutral-900/80 hover:bg-neutral-800 text-slate-200 hover:text-white font-semibold text-sm border border-neutral-750 hover:border-amber-500/50 shadow-lg shadow-black/20 hover:shadow-amber-500/10 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+        >
+          <span>{showMore ? 'Show Fewer Projects' : 'Show More Projects'}</span>
+          <svg
+            className={`w-4 h-4 text-amber-400 transition-transform duration-300 ${showMore ? 'rotate-180' : ''}`}
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            aria-hidden="true"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        {/* Expandable Coming Soon / Future Project Showcases Container */}
+        {showMore && (
+          <div className="mt-8 max-w-2xl mx-auto p-6 sm:p-8 rounded-2xl bg-neutral-900/80 border border-neutral-800 backdrop-blur-xl transition-all duration-300 shadow-2xl text-center">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 mb-4">
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
+            </div>
+            <h4 className="text-lg sm:text-xl font-bold text-white mb-2">More Projects In The Pipeline</h4>
+            <p className="text-slate-400 text-sm leading-relaxed mb-5">
+              Currently engineering new agentic AI workflows, multimodal LLM systems, and full-stack software applications. Detailed case studies, live demos, and documentation will be published here soon.
+            </p>
+            <a
+              href="https://github.com/YendetiYashashwini"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-xs font-semibold text-amber-300 hover:text-amber-200 transition-colors"
+            >
+              <span>Explore active repositories on GitHub</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        )}
       </div>
     </section>
   )
