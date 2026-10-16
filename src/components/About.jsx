@@ -1,35 +1,9 @@
 export default function About() {
-  const highlights = [
-    {
-      title: 'Autonomous AI & Agents',
-      description:
-        'Architecting intelligent agentic workflows with dynamic tool-calling, stateful context management, and live task execution.',
-      icon: (
-        <svg className="w-5 h-5 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      ),
-    },
-    {
-      title: 'Full-Stack Integration',
-      description:
-        'Building resilient, high-speed Python/FastAPI backends seamlessly linked to modern, responsive React & Tailwind CSS user interfaces.',
-      icon: (
-        <svg className="w-5 h-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-        </svg>
-      ),
-    },
-    {
-      title: 'Real-World Deployments',
-      description:
-        'Proven track record across national hackathons (Adobe, SIH, Google for Developers) delivering production-tested live prototypes.',
-      icon: (
-        <svg className="w-5 h-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-        </svg>
-      ),
-    },
+  const traits = [
+    { emoji: '🚀', label: 'Hackathon Enthusiast' },
+    { emoji: '🧠', label: 'AI & ML Builder' },
+    { emoji: '💡', label: 'Problem Solver' },
+    { emoji: '💻', label: 'Full-Stack Developer' },
   ]
 
   return (
@@ -41,7 +15,7 @@ export default function About() {
       {/* Section Header */}
       <div className="relative z-10 text-center max-w-3xl mx-auto mb-16 sm:mb-20">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-neutral-900/80 border border-neutral-800 text-xs font-medium text-slate-300 mb-4 shadow-sm backdrop-blur-sm">
-          <span>Background &amp; Philosophy</span>
+          <span>Who I Am</span>
         </div>
         <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4 leading-tight">
           About{' '}
@@ -49,70 +23,56 @@ export default function About() {
             Me
           </span>
         </h2>
-        <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-          Bridging foundational computer science principles with cutting-edge generative AI
-          to engineer practical, high-impact software systems.
-        </p>
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        {/* Left Bio Card */}
-        <div className="lg:col-span-7 rounded-2xl bg-neutral-900/70 backdrop-blur-xl border border-neutral-800/90 p-8 sm:p-10 flex flex-col justify-between shadow-xl">
-          <div>
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Building the Future with Code &amp; AI
-            </h3>
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-6 font-normal">
-              I&apos;m <span className="text-white font-semibold">Yashashwini Yendeti</span>, a B.Tech Computer Science and Engineering (AI &amp; ML) student at <span className="text-indigo-300 font-medium">Vasireddy Venkatadri Institute of Technology (VVIT)</span>, batch of 2024&ndash;2028.
-            </p>
-            <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-6">
-              My core drive is <span className="text-slate-200 font-medium">&ldquo;learning by building&rdquo;</span>. Instead of stopping at theoretical models, I focus on turning algorithms into deployed, functioning products&mdash;integrating LLM APIs, building automated agentic workflows, and training machine learning pipelines that solve tangible challenges.
-            </p>
-            <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-8">
-              Whether architecting civic intelligence platforms for the Smart India Hackathon, advancing through national coding rounds for Adobe, or engineering automated candidate screening systems, I thrive at the intersection of technical rigor and rapid execution.
-            </p>
-          </div>
+      {/* Glassmorphism Bio Card */}
+      <div className="relative z-10 max-w-4xl mx-auto rounded-2xl bg-neutral-900/60 backdrop-blur-xl border border-neutral-800/90 p-8 sm:p-12 shadow-2xl">
+        {/* Subtle card glow overlay */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-500/5 via-transparent to-purple-500/5 pointer-events-none" />
 
-          {/* Quick Info Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-6 border-t border-neutral-800/80 text-xs">
-            <div className="p-3 rounded-xl bg-neutral-800/50 border border-neutral-800">
-              <span className="block text-slate-500 font-medium mb-1">Education</span>
-              <span className="font-semibold text-slate-200">B.Tech CSE (AI &amp; ML)</span>
-              <span className="block text-slate-400 mt-0.5">VVIT (2024&ndash;2028)</span>
-            </div>
-            <div className="p-3 rounded-xl bg-neutral-800/50 border border-neutral-800">
-              <span className="block text-slate-500 font-medium mb-1">Focus Areas</span>
-              <span className="font-semibold text-slate-200">Agentic AI &amp; Full Stack</span>
-              <span className="block text-slate-400 mt-0.5">NLP &amp; Machine Learning</span>
-            </div>
-            <div className="p-3 rounded-xl bg-neutral-800/50 border border-neutral-800">
-              <span className="block text-slate-500 font-medium mb-1">Location</span>
-              <span className="font-semibold text-slate-200">Andhra Pradesh, India</span>
-              <span className="block text-slate-400 mt-0.5">Open to Remote Roles</span>
-            </div>
-          </div>
-        </div>
+        <div className="relative z-10">
+          {/* Intro paragraph */}
+          <p className="text-slate-200 text-lg sm:text-xl leading-relaxed mb-6">
+            Hi, I&apos;m{' '}
+            <span className="text-white font-bold bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
+              Yashashwini
+            </span>
+            &mdash;a B.Tech Computer Science and Engineering student specializing in{' '}
+            <span className="text-indigo-300 font-semibold">
+              Artificial Intelligence &amp; Machine Learning
+            </span>{' '}
+            at Vasireddy Venkatadri Institute of Technology (VVIT).
+          </p>
 
-        {/* Right Highlights Cards */}
-        <div className="lg:col-span-5 flex flex-col gap-5">
-          {highlights.map((item) => (
-            <div
-              key={item.title}
-              className="p-6 rounded-2xl bg-neutral-900/70 backdrop-blur-xl border border-neutral-800/90 hover:border-neutral-700 transition-all duration-200 shadow-md flex items-start gap-4"
-            >
-              <div className="p-2.5 rounded-xl bg-neutral-800/90 border border-neutral-700/80 flex-shrink-0 mt-0.5">
-                {item.icon}
-              </div>
-              <div>
-                <h4 className="text-base font-bold text-white mb-1.5">
-                  {item.title}
-                </h4>
-                <p className="text-sm text-slate-400 leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            </div>
-          ))}
+          {/* Passion paragraph */}
+          <p className="text-slate-400 text-base sm:text-lg leading-relaxed mb-6">
+            I&apos;m passionate about building practical, production-ready full-stack applications
+            that go beyond classroom theory. From architecting autonomous agentic workflows powered
+            by LLM APIs to deploying live web applications with modern frameworks, I believe the
+            best way to learn is to{' '}
+            <span className="text-slate-200 font-medium italic">ship real things</span>.
+          </p>
+
+          {/* Problem solving paragraph */}
+          <p className="text-slate-400 text-base sm:text-lg leading-relaxed mb-10">
+            Whether it&apos;s competing in national hackathons like SIH and Adobe, engineering
+            intelligent grievance routing systems, or crafting AI-powered skill verification
+            platforms, I thrive on solving complex problems through clean code, sound architecture,
+            and relentless iteration.
+          </p>
+
+          {/* Trait Pills */}
+          <div className="flex flex-wrap items-center gap-3">
+            {traits.map((trait) => (
+              <span
+                key={trait.label}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neutral-800/80 border border-neutral-700/80 hover:border-indigo-500/50 text-sm font-medium text-slate-200 hover:text-white transition-all duration-200 shadow-sm hover:shadow-indigo-500/10 hover:-translate-y-0.5 cursor-default"
+              >
+                <span className="text-base">{trait.emoji}</span>
+                <span>{trait.label}</span>
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>
