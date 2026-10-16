@@ -161,17 +161,24 @@ export default function SkillsAndExperience() {
               className="p-5 rounded-xl bg-neutral-800/50 border border-neutral-800/80 hover:border-neutral-700 transition-all flex flex-col justify-between"
             >
               <div>
-                <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                  <h4 className="text-base font-bold text-white">
-                    {item.title}
-                  </h4>
-                  <span className={`text-xs px-2.5 py-0.5 rounded-full border font-medium ${item.tagColor}`}>
+                {/* 1. Title */}
+                <h4 className="text-base font-bold text-white mb-2 leading-snug">
+                  {item.title}
+                </h4>
+
+                {/* 2. Badge Tag (below title) */}
+                <div className="mb-2.5">
+                  <span className={`inline-flex items-center text-xs px-2.5 py-0.5 rounded-full border font-medium ${item.tagColor}`}>
                     {item.tag}
                   </span>
                 </div>
-                <p className="text-xs text-indigo-300 font-medium mb-3">
+
+                {/* 3. Organizer / Subtitle */}
+                <p className="text-xs text-indigo-300 font-medium mb-2.5">
                   {item.event}
                 </p>
+
+                {/* 4. Description */}
                 <p className="text-sm text-slate-400 leading-relaxed">
                   {item.description}
                 </p>
