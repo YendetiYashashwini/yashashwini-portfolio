@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden bg-slate-950 text-slate-100 min-h-screen flex items-center justify-center px-6 py-20 lg:py-28 scroll-mt-20">
+    <section id="home" className="relative overflow-hidden bg-slate-950 text-slate-100 min-h-[calc(100vh-4rem)] flex items-center justify-center px-6 py-10 sm:py-12 lg:py-14 scroll-mt-20">
       {/* Background ambient decorative glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/15 rounded-full blur-3xl pointer-events-none" />
@@ -8,7 +8,7 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
         {/* 1. Top Badge: Pulsing green dot + text */}
-        <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-xs sm:text-sm font-medium text-slate-300 mb-8 shadow-sm backdrop-blur-md">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-xs sm:text-sm font-medium text-slate-300 mb-5 sm:mb-6 shadow-sm backdrop-blur-md">
           <span className="relative flex h-2.5 w-2.5">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
@@ -17,14 +17,14 @@ export default function Hero() {
         </div>
 
         {/* 2. Centered Large Name in bold gradient text */}
-        <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-white mb-5 leading-tight text-center">
+        <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-white mb-3 sm:mb-4 leading-tight text-center">
           <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(129,140,248,0.4)]">
             Yashashwini
           </span>
         </h1>
 
         {/* 3. Vibrant Headline / Tagline directly below the name */}
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-100 mb-6 text-center leading-snug">
+        <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-100 mb-4 sm:mb-5 text-center leading-snug">
           I Learn by Building:{' '}
           <span className="bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-300 bg-clip-text text-transparent">
             From Code to Deployed AI.
@@ -32,15 +32,15 @@ export default function Hero() {
         </h2>
 
         {/* 4. Description Subtext */}
-        <p className="text-base sm:text-lg lg:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-normal text-center">
+        <p className="text-sm sm:text-base lg:text-lg text-slate-300 max-w-2xl mx-auto mb-7 sm:mb-8 leading-relaxed font-normal text-center">
           Hi, I&apos;m Yashashwini. B.Tech CSE (AI &amp; ML) student at VVIT. Focused on building practical full-stack AI applications and agentic workflows with live deployments.
         </p>
 
         {/* 5. Action Buttons (View Projects, Download Resume, Get in Touch) */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-12">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full sm:w-auto mb-7 sm:mb-8">
           <a
             href="#projects"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600 hover:from-blue-600 hover:via-indigo-700 hover:to-purple-700 text-white font-semibold shadow-lg shadow-indigo-500/25 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600 hover:from-blue-600 hover:via-indigo-700 hover:to-purple-700 text-white font-semibold shadow-lg shadow-indigo-500/25 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
           >
             <span>View Projects</span>
             <span aria-hidden="true">&rarr;</span>
@@ -51,7 +51,7 @@ export default function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             download="Yashashwini_Yendeti_Resume.pdf"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-700 hover:border-slate-500 font-semibold transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-sm"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-700 hover:border-slate-500 font-semibold transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-sm"
           >
             <svg className="w-4 h-4 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -61,7 +61,7 @@ export default function Hero() {
 
           <a
             href="#contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900/60 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-600 font-semibold transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-900/60 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-600 font-semibold transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
           >
             <span>Get in Touch</span>
           </a>
