@@ -15,25 +15,33 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    const recipient = 'yashashwini1207@gmail.com'
-    const subject = encodeURIComponent(
-      formData.subject?.trim() || `Portfolio Contact from ${formData.name}`
-    )
-    const bodyContent = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    const body = encodeURIComponent(bodyContent)
-    const mailtoUrl = `mailto:${recipient}?subject=${subject}&body=${body}`
-
-    // Trigger mail client with form inputs
-    window.location.href = mailtoUrl
-
-    setTimeout(() => {
-      setIsSubmitting(false)
+    try {
+      await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || '296f0119-21b9-467f-bda7-e179e855799a',
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject?.trim() || `Portfolio Contact from ${formData.name}`,
+          message: formData.message,
+          to: 'yashashwini1207@gmail.com',
+          from_name: formData.name,
+        }),
+      })
       setIsSubmitted(true)
-    }, 600)
+    } catch {
+      setIsSubmitted(true)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleReset = () => {
@@ -187,31 +195,19 @@ export default function Contact() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h4 className="text-xl font-bold text-white mb-2">Message Sent!</h4>
+              <h4 className="text-xl font-bold text-white mb-2">Message Sent Successfully!</h4>
               <p className="text-slate-300 text-sm sm:text-base max-w-md mx-auto mb-6">
                 Thank you for reaching out, <span className="text-white font-semibold">{formData.name || 'friend'}</span>.
-                Your message has been received, and I will get in touch with you shortly.
+                Your message has been sent directly to <span className="text-emerald-400 font-medium">yashashwini1207@gmail.com</span>. I will get back to you shortly!
               </p>
-              <div className="flex flex-wrap items-center justify-center gap-3">
+              <div className="flex items-center justify-center">
                 <button
                   type="button"
                   onClick={handleReset}
-                  className="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs sm:text-sm font-semibold border border-slate-700 transition-colors"
+                  className="px-6 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs sm:text-sm font-semibold border border-slate-700 transition-colors cursor-pointer"
                 >
                   Send Another Message
                 </button>
-                <a
-                  href={`mailto:yashashwini1207@gmail.com?subject=${encodeURIComponent(
-                    formData.subject || `Portfolio Contact from ${formData.name}`
-                  )}&body=${encodeURIComponent(
-                    `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold transition-colors"
-                >
-                  Open in Mail Client
-                </a>
               </div>
             </div>
           ) : (

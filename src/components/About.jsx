@@ -52,9 +52,6 @@ export default function About() {
 
       {/* Section Header */}
       <div className="relative z-10 text-center max-w-4xl mx-auto mb-14 sm:mb-16">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-neutral-900/80 border border-neutral-800 text-xs font-medium text-slate-300 mb-4 shadow-sm backdrop-blur-sm">
-          <span>Who I Am &amp; What I Build</span>
-        </div>
         <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-4 leading-tight sm:whitespace-nowrap">
           Designing the Future with{' '}
           <span className="whitespace-nowrap bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
@@ -108,12 +105,8 @@ export default function About() {
               AI &amp; ML Student &amp; Engineer
             </h3>
 
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
-              Currently pursuing a B.Tech in Computer Science and Engineering specializing in <span className="text-white font-medium">Artificial Intelligence &amp; Machine Learning</span> at Vasireddy Venkatadri Institute of Technology (VVIT).
-            </p>
-
-            <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-              My core engineering focus centers on architecting practical LLM workflows, autonomous agentic systems, and building production-ready machine learning models. I emphasize taking models out of Jupyter notebooks and turning them into scalable, evaluated, and deployable software solutions.
+            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+              B.Tech CSE (AI &amp; ML) student at VVIT passionate about building practical LLM agentic workflows, machine learning pipelines, and deployable AI software solutions.
             </p>
           </div>
         </div>
@@ -134,23 +127,16 @@ export default function About() {
               Hackathon Builder
             </h3>
 
-            <p className="text-slate-400 text-sm leading-relaxed mb-5">
-              Active participant in competitive national hackathons, shipping functional AI prototypes under rapid sprint deadlines:
-            </p>
-
-            <ul className="space-y-3 mb-6">
+            <ul className="space-y-2.5 mb-5">
               {[
-                { event: 'Google for Developers / Hack2Skill', project: 'SkillProof AI Platform' },
-                { event: 'Smart India Hackathon (SIH)', project: 'GovGrievance AI Routing' },
-                { event: 'Adobe University Hackathon', project: 'Cleared Coding Round 1' },
-                { event: 'INDIA RUNS Hackathon', project: 'Candidate Intelligence System' },
+                'Google Hack2Skill',
+                'SIH (Smart India Hackathon)',
+                'Adobe University Hackathon (Round 1)',
+                'INDIA RUNS',
               ].map((item) => (
-                <li key={item.event} className="flex items-start gap-2.5 text-xs text-slate-300">
-                  <span className="text-amber-400 font-bold mt-0.5">&bull;</span>
-                  <div>
-                    <span className="font-semibold text-white">{item.event}</span>
-                    <span className="text-slate-400 block text-[11px]">{item.project}</span>
-                  </div>
+                <li key={item} className="flex items-center gap-2 text-xs sm:text-sm text-slate-300">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0"></span>
+                  <span className="font-semibold text-white">{item}</span>
                 </li>
               ))}
             </ul>
@@ -179,12 +165,8 @@ export default function About() {
               Open-Source &amp; AI Developer
             </h3>
 
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-3">
-              Focused on collaborative software engineering, shipping real code artifacts, and deploying agentic web applications. I believe software engineering is fundamentally about tangible outcomes—delivering working code, robust documentation, and public deployments.
-            </p>
-
-            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
-              Every prototype is constructed with clean Git version control, modular frontend/backend boundaries, and reliable API integrations across Gemini and Hugging Face ecosystems.
+            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Building software with clean Git architecture, reliable API integrations (Gemini &amp; Hugging Face), and production deployments.
             </p>
           </div>
 
