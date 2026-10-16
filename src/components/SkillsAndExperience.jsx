@@ -4,51 +4,106 @@ export default function SkillsAndExperience() {
       category: 'Languages',
       badgeColor: 'text-blue-400 bg-blue-500/10 border-blue-500/30',
       hoverGlow: 'hover:border-blue-500/40',
+      colSpan: 'col-span-1',
       icon: (
         <svg className="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
         </svg>
       ),
-      skills: ['Python', 'Java', 'C', 'JavaScript', 'SQL'],
+      skills: ['Python', 'Java', 'C', 'JavaScript'],
     },
     {
-      category: 'AI & Data Science',
+      category: 'Web Technologies',
+      badgeColor: 'text-rose-400 bg-rose-500/10 border-rose-500/30',
+      hoverGlow: 'hover:border-rose-500/40',
+      colSpan: 'col-span-1',
+      icon: (
+        <svg className="w-5 h-5 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+        </svg>
+      ),
+      skills: ['HTML', 'CSS'],
+    },
+    {
+      category: 'Database',
+      badgeColor: 'text-cyan-400 bg-cyan-500/10 border-cyan-500/30',
+      hoverGlow: 'hover:border-cyan-500/40',
+      colSpan: 'col-span-1',
+      icon: (
+        <svg className="w-5 h-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+        </svg>
+      ),
+      skills: ['Oracle SQL'],
+    },
+    {
+      category: 'Core Concepts',
+      badgeColor: 'text-violet-400 bg-violet-500/10 border-violet-500/30',
+      hoverGlow: 'hover:border-violet-500/40',
+      colSpan: 'col-span-1',
+      icon: (
+        <svg className="w-5 h-5 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
+      ),
+      skills: [
+        'Data Structures & Algorithms',
+        'Object-Oriented Programming',
+        'Problem Solving',
+        'Machine Learning',
+      ],
+    },
+    {
+      category: 'AI & ML',
       badgeColor: 'text-purple-400 bg-purple-500/10 border-purple-500/30',
       hoverGlow: 'hover:border-purple-500/40',
+      colSpan: 'col-span-1 md:col-span-2 lg:col-span-2',
       icon: (
         <svg className="w-5 h-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
       skills: [
-        'LLM APIs (Gemini, OpenAI)',
+        'Scikit-Learn',
+        'OpenAI API & LLMs',
+        'Gemini API',
+        'Hugging Face',
+        'NumPy',
+        'Pandas',
         'Prompt Engineering',
         'Agentic Workflows',
-        'spaCy',
-        'scikit-learn',
       ],
     },
     {
-      category: 'Web & Frameworks',
+      category: 'Frameworks & Libraries',
       badgeColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30',
       hoverGlow: 'hover:border-emerald-500/40',
+      colSpan: 'col-span-1',
       icon: (
         <svg className="w-5 h-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
         </svg>
       ),
-      skills: ['React', 'Vite', 'FastAPI', 'Streamlit', 'Tailwind CSS', 'Node.js'],
+      skills: [
+        'React',
+        'Node.js',
+        'Express.js',
+        'Tailwind CSS',
+        'FastAPI',
+        'Streamlit',
+      ],
     },
     {
       category: 'Tools & Platforms',
       badgeColor: 'text-amber-400 bg-amber-500/10 border-amber-500/30',
       hoverGlow: 'hover:border-amber-500/40',
+      colSpan: 'col-span-1',
       icon: (
         <svg className="w-5 h-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
         </svg>
       ),
-      skills: ['Git', 'GitHub', 'Docker', 'Postman', 'Vercel', 'Hugging Face'],
+      skills: ['Git', 'GitHub', 'VS Code', 'Docker', 'Postman', 'Vercel'],
     },
   ]
 
@@ -107,7 +162,7 @@ export default function SkillsAndExperience() {
         {skillCategories.map((cat) => (
           <div
             key={cat.category}
-            className={`group rounded-2xl bg-neutral-900/70 backdrop-blur-xl border border-neutral-800/90 ${cat.hoverGlow} p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
+            className={`group rounded-2xl bg-neutral-900/70 backdrop-blur-xl border border-neutral-800/90 ${cat.hoverGlow} ${cat.colSpan} p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
           >
             <div>
               {/* Category Header */}
