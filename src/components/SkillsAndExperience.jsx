@@ -60,7 +60,7 @@ export default function SkillsAndExperience() {
         'Engineered an interactive skills verification platform evaluating real code authentications and work artifacts using Gemini API.',
     },
     {
-      title: 'SIH Grievance Intelligence System',
+      title: 'SIH GovGrievance AI',
       event: 'Smart India Hackathon',
       tag: 'National Hackathon',
       tagColor: 'text-amber-300 bg-amber-500/10 border-amber-500/30',
@@ -74,6 +74,14 @@ export default function SkillsAndExperience() {
       tagColor: 'text-purple-300 bg-purple-500/10 border-purple-500/30',
       description:
         'Created an automated resume parsing and intelligent candidate scoring pipeline powered by Hugging Face models.',
+    },
+    {
+      title: 'Adobe University Hackathon',
+      event: 'Adobe',
+      tag: 'National Hackathon',
+      tagColor: 'text-rose-300 bg-rose-500/10 border-rose-500/30',
+      description:
+        'Cleared Round 1 (Coding Round), competing among university-level applicants nationwide.',
     },
   ]
 
@@ -146,11 +154,11 @@ export default function SkillsAndExperience() {
           <span className="text-xs text-purple-400 font-medium">Proof of Work</span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {milestones.map((item) => (
             <div
               key={item.title}
-              className="p-5 rounded-xl bg-neutral-800/50 border border-neutral-800/80 hover:border-neutral-700 transition-colors flex flex-col justify-between"
+              className="p-5 rounded-xl bg-neutral-800/50 border border-neutral-800/80 hover:border-neutral-700 transition-all flex flex-col justify-between"
             >
               <div>
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
